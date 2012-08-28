@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main ( )
-{
+int main ( ){
 	int prev, curr, next, count;
 
 	prev = 0;
@@ -9,10 +8,10 @@ int main ( )
 	next = 0;
 	count = 0;
 
-	while (curr < 4000000){
+	while( curr < 4000000 ){
 		next = curr + prev;
 
-		if(next % 2 == 0.0){
+		if( next % 2 == 0.0 ){
 			count += next;
 		}
 
@@ -20,7 +19,6 @@ int main ( )
 		curr = next;
 	}
 	
-	printf("%d\n", count);
-
+	printf( "%d\n", count );
 	return 0;
 }
