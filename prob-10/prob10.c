@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main(){
+int main() {
 
 	int num, i;
 	long long int sum;
@@ -15,11 +15,12 @@ main(){
 				sum += num;
 			}
 			i = 2;
-			num++;
+			++num;
 		}
 		else {
-			i++;
+			++i;
 		}
 	}
-	printf("%lld\n", sum);
+	printf( "%lld\n", sum );
+	return 0;
 }

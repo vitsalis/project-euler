@@ -7,11 +7,11 @@ int main(){
 	int k = 0;
 
 	while ( i < MAX ){
-		if( i % 3 == 0.0 || i % 5 == 0.0 ){
+		if ( i % 3 == 0.0 || i % 5 == 0.0 ){
 			k += i;
 		}
 		++i;
 	} 
-	printf( "%d\n", k );
+	printf ( "%d\n", k );
 	return 0;
 }

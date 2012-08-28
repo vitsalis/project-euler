@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int square(int );
-int main(){
+int main() {
 
 	int tot1, tot2, dif, num1, num2;
 	num1 = num2 = tot1 = tot2 = dif = 0;
@@ -21,7 +21,7 @@ int main(){
 	return 0;
 }
 
-int square(int i){
+int square( int i ) {
 	i = i * i;
 
 	return i;

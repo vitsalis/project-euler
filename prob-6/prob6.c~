@@ -5,12 +5,12 @@ int main(){
 
 	int tot1, tot2, dif, num1, num2;
 	num1 = num2 = tot1 = tot2 = dif = 0;
-	while( num1 <= 100 ){
+	while ( num1 <= 100 ) {
 		tot1 += square( num1 );
 		++num1;
 	}
 	
-	while( num2 <= 100 ){
+	while ( num2 <= 100 ) {
 		tot2 += num2;
 		++num2;
 	}
@@ -21,8 +21,8 @@ int main(){
 	return 0;
 }
 
-int square(int i)
-{
+int square(int i){
 	i = i * i;
+
 	return i;
 }
