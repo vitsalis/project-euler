@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main ( )
+int main ( )
 {
 	long long int super = 600851475143;
 	int i = 2, j = 1;

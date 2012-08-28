@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main ( ) 
+int main ( ) 
 {
 	int i = 1;	
 
@@ -13,4 +13,5 @@ main ( )
 			++i;
 		}
 	}
+	return 0;
 }
