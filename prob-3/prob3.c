@@ -19,7 +19,7 @@ int main () {
 			++i;
 		}
 		if ( super < num ) {
-			printf( "%d\n",num );
+			printf( "%d\n", num );
 			j = 0;
 		}
 	}

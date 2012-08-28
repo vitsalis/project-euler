@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main (){
+int main () {
 
 	long long int super = 600851475143;
 	int i = 2, j = 1;
@@ -16,10 +16,10 @@ int main (){
 			i = 2;
 		}
 		else {
-			i++;
+			++i;
 		}
 		if ( super < num ) {
-			printf("%d\n",num);
+			printf( "%d\n",num );
 			j = 0;
 		}
 	}
