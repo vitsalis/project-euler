@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-main(){
-
+main()
+{
 	int num, i;
 	long long int sum;
 
@@ -9,15 +9,15 @@ main(){
 	i = 2;
 	sum = 0;
 
-	while ( num < 2000000 ) {
-		if ( num % i == 0.0 ) {
-			if ( num == i ) {
+	while(num < 2000000){
+		if(num % i == 0.0){
+			if(num == i){
 				sum += num;
 			}
 			i = 2;
 			num++;
 		}
-		else {
+		else{
 			i++;
 		}
 	}
