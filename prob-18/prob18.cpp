@@ -42,6 +42,7 @@ int FindSum( int triangle[][15], int pos, int row ) {
 	if ( sum1 > sum2 ) {
 		return sum1;
 	}
+	
 	else {
 		return sum2;
 	}
