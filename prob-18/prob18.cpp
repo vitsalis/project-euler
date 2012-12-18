@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <cmath>
 
 using namespace std;
 
@@ -40,10 +41,5 @@ int findSum( int triangle[][15], int pos, int row ) {
 	sum1 += FindSum( triangle, j, i + 1 );
 	sum2 += FindSum( triangle, j + 1, i + 1 );
 
-	if ( sum1 > sum2 ) {
-		return sum1;
-	}
-	else {
-		return sum2;
-	}
+	return max( sum1, sum2);
 }
