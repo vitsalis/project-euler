@@ -30,9 +30,9 @@ bignum add( bignum a, bignum b ) {
 
 	for ( i = 999; i >= 1000 - max; --i ) {
 		sum = a.data[ i ] + b.data[ i ];
-		sum += rem;
+		sum = sum + rem;
 		rem = sum / 10;
-		sum %= 10;
+		sum = sum % 10;
 		c.data[ i ] = sum;
 		++len;
 	}
