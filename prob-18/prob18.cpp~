@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int findSum( int multarray[][ 15 ], int, int );
+int findSum( int multarray[][15], int, int );
 
 int main() {
 	FILE *fin = fopen( "prob18.in", "r" );

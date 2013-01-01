@@ -10,7 +10,7 @@ int main() {
 	sum = 0;
 
 	while ( num < 2000000 ) {
-		if ( num % i == 0 ) {
+		if ( num % i == 0.0 ) {
 			if ( num == i ) {
 				sum += num;
 			}

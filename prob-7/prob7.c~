@@ -15,7 +15,7 @@ int main() {
 			++i;
 		}
 		if ( count == 10001 ) {
-			printf( "%d\n", num - 1 );
+			printf( "%d\n", num-1 );
 			j = 0;
 		}
 	}

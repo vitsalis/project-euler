@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int square( int );
+int square(int );
 int main() {
 
 	int tot1, tot2, dif, num1, num2;
