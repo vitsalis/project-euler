@@ -40,7 +40,6 @@ void dijkstra( int array[][ 80 ] ) {
 		q.pop();
 		for ( i = -1; i < 2; ++i ) {
 			for ( j = -1; j < 2; ++j ) {
-				if ( i == 0 && j == 0 ) continue;
 				if ( i * i + j * j == 1 ) {
 					if ( check( p.x + i, p.y + j, dist[ p.x ][ p.y ], array[ p.x + i ][ p.x + j ], dist[ p.x + i ][ p.x + j ] ) ) {
 						q.push( ( cord ) { p.x + i, p.y + j } );
