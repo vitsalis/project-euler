@@ -16,8 +16,7 @@ bool check( int i, int j, int pdist, int nedist, int next ) {
 	if ( i >= N || i < 0 || j >= N || j < 0 ) {
 		return false;
 	}
-	if ( pdist + nedist < next ) return true;
-	return false;
+	return pdist + nedist < next;
 }
 
 void dijkstra( int array[][ 80 ] ) {
@@ -62,7 +61,7 @@ int main() {
 
 	for ( i = 0; i < N; ++i ) {
 		for ( j = 0; j < N; ++j ) {
-			scanf( "%d", array[ i ] + j );
+			scanf( "%d", &array[ i ][ j ] );
 		}
 	}
 
