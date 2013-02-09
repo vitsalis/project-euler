@@ -42,9 +42,9 @@ void dijkstra( int array[][ 80 ] ) {
 			for ( j = -1; j < 2; ++j ) {
 				int xx = p.x, yy = p.y;
 				if ( i * i + j * j == 1 ) {
-					if ( check( xx + i, yy + j, dist[ xx ][ yy ], array[ xx + i ][ yy + j ], dist[ xx + i ][ yy + j ] ) ) {
-						q.push( ( cord ) { xx + i, yy + j } );
-						dist[ xx + i ][ yy + j ] = dist[ xx ][ yy ] + array[ xx + i ][ yy + j ];
+					if ( check( i, j, dist[ p.x ][ p.y ], array[ i ][ j ], dist[ i ][ j ] ) ) {
+						q.push( ( cord ) { i, j } );
+						dist[ i ][ j ] = dist[ p.x ][ p.y ] + array[ i ][ j ];
 					}
 				}
 			}
