@@ -34,21 +34,24 @@ void dijkstra( int array[][ 80 ] ) {
 	while ( !q.empty() ) {
 		cord p = q.front();
 		q.pop();
-		if ( check( p.x + 1, dist[ p.x ][ p.y ], array[ p.x + 1 ][ p.y ], dist[ p.x + 1 ][ p.y ] ) ) {
-			dist[ p.x + 1 ][ p.y ] = dist[ p.x ][ p.y ] + array[ p.x + 1 ][ p.y ];
-			q.push( ( cord ) { p.x + 1, p.y } );
-		}
-		if ( check( p.x - 1, dist[ p.x ][ p.y ], array[ p.x - 1 ][ p.y ], dist[ p.x - 1 ][ p.y ] ) ) {
-			dist[ p.x - 1 ][ p.y ] = dist[ p.x ][ p.y ] + array[ p.x - 1 ][ p.y ];
-			q.push( ( cord ) { p.x - 1, p.y } );
-		}
-		if ( check( p.y + 1, dist[ p.x ][ p.y ], array[ p.x ][ p.y + 1 ], dist[ p.x ][ p.y + 1 ] ) ) {
-			dist[ p.x ][ p.y + 1 ] = dist[ p.x ][ p.y ] + array[ p.x ][ p.y + 1 ];
-			q.push( ( cord ) { p.x, p.y + 1 } );
-		}
-		if ( check( p.y - 1, dist[ p.x ][ p.y ], array[ p.x ][ p.y - 1 ], dist[ p.x ][ p.y - 1 ] ) ) {
-			dist[ p.x ][ p.y - 1 ] = dist[ p.x ][ p.y ] + array[ p.x ][ p.y - 1 ];
-			q.push( ( cord ) { p.x, p.y - 1 } );
+		for ( i = p.x - 1; i < p.x + 2; ++i ) {
+			for ( j = p.y - 1; j < p.y + 2; ++j ) {
+				if ( i == p.x && j == p.y ) continue;
+				if ( i == p.x + 1 && ( j == p.y + 1 || j == p.y - 1 ) ) continue;
+				if ( i == p.x - 1 && ( j == p.y - 1 || j == p.y + 1 ) ) continue;
+				if ( i != p.x ) {
+					if ( check( i, dist[ p.x ][ p.y ], array[ i ][ j ], dist[ i ][ j ] ) ) {
+						q.push( ( cord ) { i, j } );
+						dist[ i ][ j ] = dist[ p.x ][ p.y ] + array[ i ][ j ];
+					}
+				}
+				else {
+					if ( check( j, dist[ p.x ][ p.y ], array[ i ][ j ], dist[ i ][ j ] ) ) {
+						q.push( ( cord ) { i, j } );
+						dist[ i ][ j ] = dist[ p.x ][ p.y ] + array[ i ][ j ];
+					}
+				}
+			}
 		}
 	}
 
