@@ -39,11 +39,11 @@ void dijkstra( int array[][ 80 ] ) {
 		q.pop();
 		for ( i = -1; i < 2; ++i ) {
 			for ( j = -1; j < 2; ++j ) {
-				int xx = p.x, yy = p.y;
+				int xx = p.x + i, yy = p.y + j;
 				if ( i * i + j * j == 1 ) {
-					if ( check( xx + i, yy + j, dist[ xx ][ yy ], array[ xx + i ][ yy + j ], dist[ xx + i ][ yy + j ] ) ) {
-						q.push( ( cord ) { xx + i, yy + j } );
-						dist[ xx + i ][ yy + j ] = dist[ xx ][ yy ] + array[ xx + i ][ yy + j ];
+					if ( check( xx, yy, dist[ p.x ][ p.y ], array[ xx ][ yy ], dist[ xx ][ yy ] ) ) {
+						q.push( ( cord ) { xx, yy } );
+						dist[ xx ][ yy ] = dist[ p.x ][ p.y ] + array[ xx ][ yy ];
 					}
 				}
 			}
