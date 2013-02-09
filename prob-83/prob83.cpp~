@@ -11,7 +11,7 @@ struct cord {
 const int N = 80;
 
 bool check( int pos, int pdist, int nedist, int next ) {
-	if ( pos >= N || pos < 0 ) {
+	if ( pos >= 80 || pos < 0 ) {
 		return false;
 	}
 	if ( pdist + nedist < next ) return true;
@@ -19,11 +19,11 @@ bool check( int pos, int pdist, int nedist, int next ) {
 }
 
 void dijkstra( int array[][ 80 ] ) {
-	long long int dist[ N ][ N ];
+	long long int dist[ 80 ][ 80 ];
 	int i, j;
 
-	for ( i = 0; i < N; ++i ) {
-		for ( j = 0; j < N; ++j ) {
+	for ( i = 0; i < 80; ++i ) {
+		for ( j = 0; j < 80; ++j ) {
 			dist[ i ][ j ] = 1000000000;
 		}
 	}
@@ -57,17 +57,17 @@ void dijkstra( int array[][ 80 ] ) {
 		}
 	}
 
-	printf( "%lld\n", dist[ N - 1 ][ N - 1 ] );
+	printf( "%lld\n", dist[ 79 ][ 79 ] );
 
 }
 
 int main() {
 	freopen( "prob83.in", "r", stdin );
-	int array[ N ][ N ];
+	int array[ 80 ][ 80 ];
 	int i, j;
 
-	for ( i = 0; i < N; ++i ) {
-		for ( j = 0; j < N; ++j ) {
+	for ( i = 0; i < 80; ++i ) {
+		for ( j = 0; j < 80; ++j ) {
 			scanf( "%d", array[ i ] + j );
 		}
 	}
