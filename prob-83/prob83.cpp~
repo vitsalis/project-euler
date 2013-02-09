@@ -9,7 +9,7 @@ struct cord {
 };
 
 const int N = 80;
-const long int INF = 100000000;
+const long int INF = 10000000000;
 
 bool check( int i, int j, int pdist, int nedist, int next ) {
 	if ( i >= N || i < 0 || j >= N || j < 0 ) {
