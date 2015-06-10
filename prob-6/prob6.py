@@ -1,6 +1,7 @@
-s1 = s2 = 0
+squares = []
+nums = []
 
 for i in range(1, 101):
-    s1 += i ** 2
-    s2 += i
-print(s2 ** 2 - s1)
+    squares.append(i ** 2)
+    nums.append(i)
+print(sum(nums) ** 2 - sum(squares))
