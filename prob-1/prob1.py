@@ -1,7 +1,7 @@
-sum = 0
+nums = []
 
 for i in range(1000):
     if i % 3 == 0 or i % 5 == 0:
-        sum += i
+        nums.append(i)
 
-print sum
+print sum(nums)
