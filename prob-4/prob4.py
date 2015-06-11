@@ -3,11 +3,6 @@ def is_palindrome(num):
     num = str(num)
     return num == num[::-1]
 
-max = 1
-for i in range(100, 999):
-    for j in range(100, 999):
-        if is_palindrome(i * j):
-            if i * j > max:
-                max = i * j
-                break
-print max
+palindromes = [x * y for x in range(100, 999) for y in range(100, 999) if is_palindrome(x * y)]
+
+print max(palindromes)
