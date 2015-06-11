@@ -6,6 +6,7 @@ def isPrime(num):
             isPrime = False
             break
     return isPrime
+
 cnt = 0
 i = 2
 
