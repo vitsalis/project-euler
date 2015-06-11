@@ -1,16 +1,16 @@
-def isPrime(num):
+def is_prime(num):
     """Checks if the given number is a prime"""
-    isPrime = True
+    is_prime = True
     for i in range(2, num // 2):
         if num % i == 0:
-            isPrime = False
+            is_prime = False
             break
-    return isPrime
+    return is_prime
 
 primes = []
 
 for i in range(2, 2 * 10 ** 6):
-    if isPrime(i):
+    if is_prime(i):
         primes.append(i)
 
 print sum(primes)

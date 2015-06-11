@@ -1,4 +1,4 @@
-def isPalindrome(num):
+def is_palindrome(num):
     """Checks if the given number is a palindrome"""
     num = str(num)
     return num == num[::-1]
@@ -6,7 +6,7 @@ def isPalindrome(num):
 max = 1
 for i in range(999, 100,-1):
     for j in range(999, 100,-1):
-        if isPalindrome(i * j):
+        if is_palindrome(i * j):
             if i * j > max:
                 max = i * j
                 break
